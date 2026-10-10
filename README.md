@@ -1,50 +1,108 @@
-# Gemini Assistant Chrome Extension
+# ✨ PuchoAI — Just Pucho. Get Clarity.
 
-A sleek, lightweight Chrome Extension powered by Google's Gemini API that provides a floating AI assistant seamlessly integrated into any webpage.
+**Your AI assistant, one shortcut away. 🚀**
 
-## Features
-- **Spotlight-Style UI:** Pops up right in the center of your screen with a gorgeous dark/light theme.
-- **Draggable & Resizable:** Drag the header to move it around, and use the bottom-right corner to resize.
-- **Theme Toggle:** Instantly switch between Light and Dark mode with the sun/moon icon.
-- **Transparency Control:** Adjust the slider to see the underlying webpage while you chat.
-- **Markdown Support:** The assistant formats code, links, and text beautifully.
-- **Copy Answer:** Easily copy the AI's response to your clipboard with a single click.
-- **Privacy-First:** Your API key is stored locally in Chrome and is never transmitted anywhere except directly to Google's official Gemini endpoint.
+Why switch tabs every time you need an explanation?
+PuchoAI brings a lightweight, Gemini-powered AI chat panel directly to your browser, helping you understand concepts, explore ideas, debug code, and learn faster — without interrupting your workflow.
 
-## Installation
+💬 Got a question? **Bas PuchoAI se pucho!**
 
-Since this extension is not currently published on the Chrome Web Store, you can easily install it as an "Unpacked Extension" directly from this source code.
+## 🌟 What Makes PuchoAI Different?
+- **⚡ Quick Access** — Open your floating assistant with a keyboard shortcut.
+- **🪟 Floating Chat UI** — Ask questions without leaving your current webpage.
+- **🎨 Customizable Appearance** — Adjust the panel's size and transparency.
+- **🧠 Gemini-Powered Answers** — Get explanations, ideas, and coding help through Google's Gemini API.
+- **📋 Copy Answers** — Copy responses for notes, study material, or your projects.
+- **🌙 Minimal Dark UI** — A sleek interface designed to keep your workspace uncluttered.
+- **🔑 Your Own API Key** — Configure your personal Gemini API key through the extension settings.
+- **💾 Local Settings** — Store your key in the browser's `chrome.storage.local`.
 
-1. Clone or download this repository to your local machine.
-2. Open Google Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** using the toggle switch in the top right corner.
-4. Click the **Load unpacked** button.
-5. Select the folder containing this project.
-6. The Gemini Assistant extension will now appear in your list of extensions!
+## 🎯 What Can You Use It For?
 
-## Configuration (API Key)
+| Use case | How PuchoAI helps |
+| --- | --- |
+| 📚 **Learning** | Break down difficult concepts into simple explanations. |
+| 💻 **Coding** | Understand errors, algorithms, and code snippets. |
+| 📝 **Revision** | Summarize concepts and create practice questions. |
+| 🔍 **Research** | Explore ideas and clarify unfamiliar terminology. |
+| 💡 **Productivity** | Brainstorm ideas without constantly switching tabs. |
 
-To use the assistant, you need to provide your own Gemini API key.
+*Less tab switching. More understanding.*
 
-1. Get a free API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
-2. In Chrome, click the puzzle piece icon (Extensions) in the top right.
-3. Find **Gemini Assistant** and click the three dots (`⋮`) next to it, then select **Options**.
-4. Paste your API key into the configuration page and select your preferred model (e.g., Gemini 3.8 Flash).
-5. Click **Save Settings**.
+## ⚙️ Installation
+PuchoAI can be installed locally in Chrome using Developer Mode.
+1. Download or clone this repository.
+2. Open `chrome://extensions/` in Google Chrome.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the downloaded PuchoAI project folder.
+6. Open the extension's options page and configure your own Gemini API key.
+7. Visit a normal webpage and use the configured keyboard shortcut to open the assistant.
 
-Your API key is securely saved locally in your browser (`chrome.storage.local`).
+That's it! 🎉
 
-## Usage
+## 🔐 API Key Setup
+PuchoAI uses the Google Gemini API to generate responses.
+1. Visit [Google AI Studio](https://aistudio.google.com/).
+2. Obtain your own Gemini API key.
+3. Open PuchoAI's extension options.
+4. Enter your key, select a supported model, and save your settings.
 
-- Press **Alt+B** (or your configured shortcut) on any webpage to open the Gemini floating panel.
-- Type your question or prompt into the input field and hit **Enter**.
-- Use the minimize (`-`), close (`X`), theme, and transparency controls located in the header to customize the view.
+**Security notes:**
+- Never commit your personal API key to GitHub.
+- The extension stores the configured key in `chrome.storage.local`.
+- Local browser storage is not a secure vault against someone who can access your browser profile or inspect the extension.
+- API availability, quotas, and pricing depend on Google's current terms and your account.
+- This project is intended for personal productivity and learning. Follow the rules of your school, workplace, or examination environment.
 
-## Security & Privacy Notice
+## 🛠️ Tech Stack
+- JavaScript
+- HTML5
+- CSS3
+- Chrome Extensions — Manifest V3
+- Google Gemini API
+- Chrome Storage API
 
-- **No Hardcoded Secrets:** This repository does not contain any hardcoded API keys.
-- **.gitignore:** We use a `.gitignore` file to ensure local secrets (like `.env`) are never accidentally pushed.
-- **Direct API Calls:** The extension communicates directly with Google's APIs. No middleman servers intercept your data.
+## 📂 Project Structure
+```text
+PuchoAI/
+├── manifest.json
+├── background.js
+├── content.js
+├── content.css
+├── api.js
+├── options.html
+├── options.css
+├── options.js
+├── popup.html
+├── popup.css
+├── popup.js
+├── marked.min.js
+├── .gitignore
+└── README.md
+```
 
-## License
-MIT License
+## 🗺️ Roadmap
+- [ ] Smarter webpage text selection and explanations
+- [ ] Improved conversation management
+- [ ] Additional customization options
+- [ ] Better error messages and API diagnostics
+- [ ] More study and productivity tools
+
+Have an idea? Contributions and suggestions are welcome!
+
+## 🤝 Contributing
+Found a bug or have an improvement in mind?
+1. Fork the repository.
+2. Create a feature branch.
+3. Make your changes.
+4. Submit a pull request with a clear explanation.
+
+## ⚠️ Disclaimer
+PuchoAI is an independent, community-developed project and is not affiliated with or endorsed by Google. Gemini is a Google product. AI-generated answers can be inaccurate, so verify important information.
+
+## ⭐ Support the Project
+If PuchoAI makes your workflow easier, consider giving the repository a ⭐ on GitHub.
+
+**PuchoAI — Your browser. Your questions. Your AI assistant.**
+*Built with curiosity, powered by Gemini. 🚀*
