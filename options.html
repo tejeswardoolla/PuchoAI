@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gemini Assistant Options</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Gemini Assistant Settings</h2>
+    
+    <div class="form-group">
+      <label for="apiKey">Gemini API Key</label>
+      <input type="password" id="apiKey" placeholder="AIzaSy...">
+      <p class="help-text">
+        <strong>Security Warning:</strong> This key is stored locally in your browser (using chrome.storage.local). 
+        Do not use a key with access to sensitive cloud resources or billing enabled unless you understand the risks. 
+        You can get a free API key from Google AI Studio.
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="model">Gemini Model</label>
+      <select id="model">
+        <option value="gemini-3.8-flash">Gemini 3.8 Flash (Recommended)</option>
+        <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
+      </select>
+    </div>
+
+    <button id="saveBtn">Save Settings</button>
+    <div id="status"></div>
+    
+    <div class="instructions">
+      <h3>Keyboard Shortcut</h3>
+      <p>Use <strong>Alt+B</strong> (or Command+B on Mac) to toggle the slider on any ordinary webpage.</p>
+      <p>You can change this shortcut in Chrome at <code>chrome://extensions/shortcuts</code>.</p>
+      
+      <h3>Fullscreen Notes</h3>
+      <p>Chrome prevents floating DOM overlays (like this slider) on pages that are in true fullscreen mode (e.g., YouTube video fullscreen). The slider will still work in browser fullscreen (F11), but if an element requests fullscreen via the Fullscreen API, overlays are restricted for security. If you need assistance during video fullscreen, exit fullscreen first.</p>
+    </div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Flash Floating Slider",
+  "version": "1.0",
+  "description": "Floating AI assistant powered by Google Gemini Flash API.",
+  "permissions": [
+    "storage",
+    "contextMenus",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["marked.min.js", "api.js", "content.js"],
+      "css": ["content.css"],
+      "all_frames": false
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gemini Assistant"
+  },
+  "commands": {
+    "toggle-slider": {
+      "suggested_key": {
+        "default": "Alt+B",
+        "mac": "Command+B"
+      },
+      "description": "Toggle Gemini Slider"
+    }
+  }
+}
